@@ -115,7 +115,7 @@ function league(L,root){const hasT=Object.keys(L.teams||{}).length>0,hasO=L.slat
  }
  let act={};try{act=JSON.parse(localStorage.getItem("sb_"+L.key)||"{}")}catch(e){}
  function trk(){let n=0,su=0,vn=0,vs=0,cn=0,cs=0;L.slate.forEach((g,ix)=>{const y=parseFloat(act[ix]);if(isNaN(y)||y===0)return;const i=info(g);n++;if((i.m>0)===(y>0))su++;
-  if(i.hl!=null){vn++;if((i.hl<0)===(y>0))vs++;const c=y+i.hl;if(c!==0){cn++;if((i.m+i.hl>0)===(c>0))cs++}}});
+  if(i.hl!=null){vn++;if((i.hl<0)===(y>0))vs++;const c=y+i.hl;cn++;if(c===0||Math.abs(i.m+i.hl)<0.05||(i.m+i.hl>0)===(c>0))cs++}});
   q('[data-sum]').innerHTML=n?`<div class="kv"><div><span>Games scored </span>${n}</div><div><span>Sim winners </span>${su}/${n}</div><div><span>Vegas favorites </span>${vs}/${vn}</div><div><span>Sim cover picks </span>${cs}/${cn}</div></div>`:"Enter results to compare the sim with always picking the Vegas favorite."}
  q('[data-tb]').innerHTML="<tr><th>Game</th><th>Sim</th><th class=sc>Final margin</th></tr>"+L.slate.map((g,ix)=>{const i=info(g);return`<tr><td>${g[0]} @ ${g[1]}</td><td>${i.fav} by ${f1(Math.abs(i.m))}</td><td><input class="sc" type="number" step="1" data-i="${ix}" value="${act[ix]??""}" aria-label="Final margin ${g[1]} minus ${g[0]}"></td></tr>`}).join("");
  q('[data-tb]').oninput=e=>{act[e.target.dataset.i]=e.target.value;try{localStorage.setItem("sb_"+L.key,JSON.stringify(act))}catch(x){}trk()};trk()}
@@ -124,7 +124,7 @@ function league(L,root){const hasT=Object.keys(L.teams||{}).length>0,hasO=L.slat
 const SPORTS=[["NFL","NFL"],["CFB","College"],["NBA","NBA"],["MLB","MLB"]],
  VNAME={v1:"original model",v2:"old model",v3:"model only (before the blend)",v4:"version 4",blend:"blend (60% line, 40% new model)",mlb_v1:"version 1"};
 function scored(rows,k=3){return rows.map(r=>{const[a,h,y,,hl,rk]=r,m=r[k];if(m==null)return null;const c=hl==null?null:y+hl;
- return{a,h,y,m,hl,rk,bm:r[6],su:y===0?null:(m>0)===(y>0),sv:hl==null||y===0?null:(hl<0)===(y>0),cv:hl==null||c===0?null:(m+hl>0)===(c>0),e:Math.abs(m-y),ev:hl==null?null:Math.abs(-hl-y)}}).filter(Boolean)}
+ return{a,h,y,m,hl,rk,bm:r[6],su:y===0?null:(m>0)===(y>0),sv:hl==null||y===0?null:(hl<0)===(y>0),cv:hl==null?null:(c===0||Math.abs(m+hl)<0.05)?true:(m+hl>0)===(c>0),e:Math.abs(m-y),ev:hl==null?null:Math.abs(-hl-y)}}).filter(Boolean)}
 function cmpTable(rows,note,lab){const S=scored(rows,3),B=scored(rows,6),O=scored(rows,7);if(!B.length&&!rows.some(r=>r[9]!=null))return"";
  const line=(n,R,veg)=>`<tr><td>${n}</td><td>${R.length}</td><td>${tl(R,veg?'sv':'su')}</td><td>${veg?"–":tl(R,'cv')}</td><td>${av(R,veg?'ev':'e')}</td></tr>`;
  const hasX=rows.some(r=>r[8]!=null||r[9]!=null);if(hasX&&!note)note="";if(hasX)note=(note?note+" ":"")+"";
