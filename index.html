@@ -185,7 +185,7 @@ function scorecard(root){
    $('#scB').innerHTML=tbl("All weeks",keys.flatMap(k=>ws[k].rows),sp,1)+cap+keys.slice().reverse().map(k=>tbl(k,ws[k].rows,sp)).join("")};
  $('#scS').onchange=draw;draw()}
 scorecard($('#sc'));
-/*PF*/const PF={"start":1000.0,"bets":[]};/*END PF*/
+/*PF*/const PF={"start":1000.0,"bets":[["2026-11-07",null,"CFB","Cincinnati @ Houston \u00b7 Sat 3:30 PM","Cincinnati ML","ML",320,13,4.0,"open",null,"College is a test for now: ranked games, moneylines only. DraftKings prices via ESPN, Sat Nov 7 around 12:50 PM ET"]]};/*END PF*/
 (function(root){
  const SP={NFL:"NFL",CFB:"College",NBA:"NBA",MLB:"MLB"},TY={ML:"Moneyline",SPR:"Spread",PROP:"Player prop"};
  const net=o=>o>0?o/100:100/-o,usd=v=>(v<0?"−$":"$")+Math.abs(v).toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});
