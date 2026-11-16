@@ -46,10 +46,51 @@ table{width:100%;border-collapse:collapse;font-size:13px;background:var(--card)}
 .h2{font:700 18px Rockwell,Georgia,serif;margin:18px 0 2px}.card small{font:400 12px system-ui;color:var(--mut)}
 .ctl{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:520px;margin-bottom:6px}.ctl label{display:block;font-size:13px;color:var(--mut);margin-bottom:4px}
 @media(max-width:600px){.row,.axis{grid-template-columns:1fr 1fr}.bar{grid-column:1/3;order:3}.axis span:nth-child(2){display:none}.pn{grid-template-columns:1fr}}
+/*DRVCSS*/
+#ds label{display:flex;flex-direction:column;gap:4px;font-size:12px;font-weight:600;color:var(--mut)}
+#ds select,#ds input:not([type=range]){padding:9px 10px;border:1px solid var(--line);border-radius:8px;font:15px system-ui;background:var(--card);color:var(--ink);min-width:0}
+#ds input[type=range]{accent-color:var(--acc)}
+.ds-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin:12px 0;display:flex;flex-direction:column;gap:12px}
+.ds-h{font:700 19px Rockwell,"Roboto Slab",Georgia,serif;margin:0}
+.ds-top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.ds-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.ds-g3{grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+.ds-row{display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end}
+.ds-sm{width:140px}
+.ds-go{background:var(--acc);color:#fff;border:0;border-radius:8px;padding:0 18px;min-height:44px;font:700 15px system-ui;cursor:pointer;margin-left:auto}
+.ds-ctl .ds-go{margin-left:0;min-width:90px}
+.ds-what summary{cursor:pointer;font-size:13px;color:var(--mut);font-weight:600}.ds-what[open] summary{margin-bottom:10px}
+.ds-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.ds-tile{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:2px}
+.ds-tile .sub{margin:0}.ds-tile b{font:700 24px Rockwell,"Roboto Slab",Georgia,serif}
+.ds-bar{height:8px;background:var(--soft);border-radius:4px;overflow:hidden;margin:4px 0}.ds-bar i{display:block;height:8px;background:var(--acc)}
+.ds-hist{position:relative;height:190px;display:flex;align-items:flex-end;gap:2px;border-bottom:1px solid var(--line);padding-top:10px}
+.ds-hist i{flex:1 1 0;min-width:0;border-radius:2px 2px 0 0}.ds-hist b{position:absolute;top:0;bottom:0;width:2px;background:var(--warn)}
+.ds-axis{display:flex;justify-content:space-between;font-size:11px;color:var(--mut)}
+.ds-legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--mut);margin-top:6px}.ds-legend span{display:flex;align-items:center;gap:6px}
+.ds-legend i{display:inline-block;width:16px;height:6px;border-radius:2px}.ds-legend i.dash{height:0;border-top:4px dashed #fca5a5}
+.ds-sb{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));background:#12261c;color:#fff;border-radius:10px;overflow:hidden}
+.ds-sb>div{padding:9px 14px;display:flex;align-items:center;gap:10px;border-right:1px solid #25362c}
+.ds-sb>div span{margin-left:auto;font:700 26px Rockwell,Georgia,serif}.ds-sb i{width:10px;height:10px;border-radius:50%}
+.ds-sb small{color:#8fa397;font-size:12px;display:block}.ds-sb .dd{flex-direction:column;align-items:flex-start;gap:0;background:#1b2b22}.ds-sb .dd b{color:#e0a93b}
+.ds-sb>div:nth-child(3){flex-direction:column;align-items:flex-start;gap:0}
+[data-field]{overflow-x:auto;border-radius:8px}.ds-field{width:100%;min-width:620px;height:auto;display:block;border-radius:8px}
+.ds-field .ez{fill:#f3efe2;font:700 44px system-ui;text-anchor:middle;letter-spacing:8px}.ds-field .num text{fill:#fff;fill-opacity:.75;font:700 30px system-ui}
+.ds-field .pl{fill:#fff;font:700 16px system-ui;paint-order:stroke;stroke:#12261c;stroke-width:3px}
+.ds-ctl{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:10px}
+.ds-ctl>button:not(.chip):not(.ds-go){background:var(--card);border:1px solid var(--line);border-radius:8px;width:44px;height:44px;color:var(--ink);cursor:pointer}
+.ds-split{display:flex;flex-wrap:wrap;gap:16px}.ds-split>div:first-child{flex:999 1 380px;min-width:0}.ds-side{flex:1 1 240px;min-width:0}
+.ds-plays{list-style:none;margin:0;padding:0}.ds-plays li{display:grid;grid-template-columns:120px minmax(0,1fr);gap:10px;padding:6px 8px;border-bottom:1px solid var(--line);font-size:14px;border-radius:6px}
+.ds-plays li span:first-child{color:var(--mut);font-size:13px}.ds-plays li.on,#ds tr.on td{background:var(--soft)}
+.ds-mini{background:var(--soft);border-radius:8px;padding:10px}.ds-wpsvg{width:100%;height:auto}.ds-wpsvg .ax{fill:var(--mut);font:11px system-ui}
+.ds-wpn{font:700 20px Rockwell,Georgia,serif;color:var(--acc)}.ds-live{font-size:15px}
+#ds table{border-collapse:collapse;width:100%;font-size:14px}#ds th,#ds td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line)}#ds th{font-size:12px;color:var(--mut)}
+@media (max-width:600px){.ds-plays li{grid-template-columns:1fr}.ds-go{margin-left:0}}
+/*END DRVCSS*/
 </style></head><body><main>
 <h1>Sim Board</h1><p class="sub" id="top"></p>
-<nav id="main" role="tablist"><button role="tab" aria-selected="true" data-p="nfl">NFL</button><button role="tab" aria-selected="false" data-p="cfb">College</button><button role="tab" aria-selected="false" data-p="nba">NBA</button><button role="tab" aria-selected="false" data-p="mlb">MLB</button><button role="tab" aria-selected="false" data-p="pf">Portfolio</button><button role="tab" aria-selected="false" data-p="rs">Previous results</button><button role="tab" aria-selected="false" data-p="sc" hidden>Scorecard</button></nav>
-<section id="nfl"></section><section id="cfb" hidden></section>
+<nav id="main" role="tablist"><button role="tab" aria-selected="true" data-p="nfl">NFL</button><button role="tab" aria-selected="false" data-p="ds">NFL Drive Sim</button><button role="tab" aria-selected="false" data-p="cfb">College</button><button role="tab" aria-selected="false" data-p="nba">NBA</button><button role="tab" aria-selected="false" data-p="mlb">MLB</button><button role="tab" aria-selected="false" data-p="pf">Portfolio</button><button role="tab" aria-selected="false" data-p="rs">Previous results</button><button role="tab" aria-selected="false" data-p="sc" hidden>Scorecard</button></nav>
+<section id="nfl"></section><section id="ds" hidden></section><section id="cfb" hidden></section>
 <section id="nba" hidden></section>
 <section id="mlb" hidden><div class="soon"><b>MLB returns next spring</b><p>The 2026 regular season is over. The rebuilt baseball sim (starting pitchers, bullpens, park factors, and edges against the moneyline) starts on Opening Day 2027. Runs on Tuesdays and Fridays.</p></div></section>
 <section id="pf" hidden></section><section id="rs" hidden></section><section id="sc" hidden></section>
@@ -60,7 +101,7 @@ const D={"nfl":{"key":"nfl_w10","week":"Week 10 \u00b7 Nov 12\u201316","sub":"Th
 const erf=x=>{const s=Math.sign(x);x=Math.abs(x);const t=1/(1+.3275911*x);return s*(1-(((((1.061405429*t-1.453152027)*t)+1.421413741)*t-.284496736)*t+.254829592)*t*Math.exp(-x*x))},Phi=z=>.5*(1+erf(z/Math.SQRT2));
 const f1=x=>(Math.round(x*10)/10).toFixed(1),sg=x=>x>0?"+"+f1(x):f1(x);
 $('#top').textContent="NFL "+D.nfl.week+" · College "+D.cfb.week+" · NBA Tue Nov 10 – Wed Nov 11 · MLB coming soon";
-document.querySelectorAll('#main button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#main button').forEach(x=>x.setAttribute('aria-selected',x===b));["nfl","cfb","nba","mlb","pf","rs","sc"].forEach(p=>$('#'+p).hidden=p!==b.dataset.p)});
+document.querySelectorAll('#main button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#main button').forEach(x=>x.setAttribute('aria-selected',x===b));["nfl","ds","cfb","nba","mlb","pf","rs","sc"].forEach(p=>$('#'+p).hidden=p!==b.dataset.p)});
 const rn=()=>Math.sqrt(-2*Math.log(1-Math.random()))*Math.cos(2*Math.PI*Math.random());
 function info(g){const [a,h,ar,hr,p,m,sd,hl,nu,qb,cf]=g,ps=g[11]??m,fav=m>0?h:a,sf=ps>0?h:a,vf=hl==null?null:(hl<0?h:a),cov=hl==null?null:(ps+hl>0?h:a);
  const pp=Math.max(p,1-p),agree=sf===fav;let t=pp>=.70?2:pp>=.60?1:0;if(!agree)t--;if(qb)t--;t=Math.max(t,0);
@@ -257,4 +298,246 @@ scorecard($('#sc'));
  const paint=()=>{root.querySelector('[data-pfc]').innerHTML=done.length?chipRow("sport","Sport:",[["all","All"],...sports.map(k=>[k,SP[k]])])+chipRow("type","Bet:",[["all","All"],["SPR","Spread"],["ML","Moneyline"],["PROP","Player props"]])+chipRow("res","Result:",[["all","All"],["W","Won"],["L","Lost"],["P","Push"]]):"";
   root.querySelector('[data-pfl]').innerHTML=hist();root.querySelectorAll('[data-pf]').forEach(c=>c.onclick=()=>{F[c.dataset.pf]=c.dataset.v;paint()})};
  paint()})($('#pf'));
+
+
+
+/*DRV*/(function(){
+const root=document.getElementById('ds');if(!root)return;
+let J=null,loading=false;
+const tabBtn=document.querySelector('#main [data-p=ds]');
+const start=()=>{if(J||loading)return;loading=true;root.innerHTML='<p class="sub">Loading the drive model…</p>';
+ fetch('drive_sim.json').then(r=>{if(!r.ok)throw 0;return r.json()}).then(j=>{J=j;init()}).catch(()=>{root.innerHTML='<div class="soon"><b>Drive Sim runs on the published site</b><p>This copy of the page can\'t load the drive model file. Open the Sim Board site to use it.</p></div>'})};
+if(tabBtn)tabBtn.addEventListener('click',start);
+/* ---------- model ---------- */
+const MID=[5,15,25,35,45,55,65,72.5,77.5,85,95];
+let CUTS,NB,NS,DC,BASEKEY={};
+function rng(seed){let a=seed>>>0;return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+const binOf=y=>{y=Math.min(99,Math.max(1,y));let b=0;for(const c of CUTS)if(y>=c)b++;return b};
+const sitOf=(half,left,diff)=>{if(half!==2)return 0;let s=1;for(const c of DC)if(diff>=c)s++;return s+(left<=J.late_s?DC.length+1:0)};
+function probs(ytg,off,dfn,home,sit){const x=new Array(J.coef[0].length).fill(0),b=binOf(ytg),k=NB,f=ytg/100;x[b]=1;
+ x[k]=off*10;x[k+1]=dfn*10;x[k+2]=home;x[k+3]=off*10*f;x[k+4]=dfn*10*f;if(sit>0)x[k+5+sit-1]=1;
+ const z=J.icpt.map((a,i)=>a+J.coef[i].reduce((s,c,j)=>s+c*x[j],0)),m=Math.max(...z),e=z.map(v=>Math.exp(v-m)),t=e.reduce((a,b)=>a+b,0);return e.map(v=>v/t)}
+function table(H,A,neutral){const K=J.strength,h=neutral?0:1,T=[];
+ const side=(o,d,hh)=>MID.map(y=>Array.from({length:NS},(_,s)=>{const p=probs(y,o*K,d*K,hh,s);let c=0;return p.map(v=>c+=v)}));
+ T[0]=side(H.off,A.dfn,h);T[1]=side(A.off,H.dfn,-h);return T}
+const pool=(c,b,s)=>J.pools[`${c}_${b}_${s}`]||J.pools[`${c}_${b}`]||BASEKEY[`${c}_${b}`];
+const latePool=(b,s)=>J.late[`${b}_${s}`]||J.late[`${b}`];
+const pickA=(a,r)=>a[Math.floor(r()*a.length)];
+/* one game from a state; rec = record drives for the replay */
+function game(T,r,st,rec){
+ const fr=st.fr??(r()<.5?0:1),s={pts:st.pts.slice(),off:st.off??fr,half:st.half,left:st.left,ytg:st.ytg??pickA(J.kick,r),fr,otd:0,ot:false};const log=[];
+ for(let step=0;step<80;step++){
+  const b=binOf(s.ytg),o=s.off,late=s.left<150&&s.half<3,diff=s.pts[o]-s.pts[1-o];
+  const sit=sitOf(s.half===3?2:s.half,s.half===3?0:s.left,diff);
+  const cum=T[o][b][sit],u=r();let c=0;while(c<cum.length-1&&u>cum[c])c++;
+  const row=pickA(pool(c,b,sit),r);let top=row[0],op=row[1],dp=row[2],plays=row[6],rs=row[5];
+  const runs=late||(top>=s.left&&s.half<3);let cls=J.classes[c];
+  if(runs){const L=pickA(latePool(b,sit),r);op=L[0];dp=L[1];rs=L[2];plays=L[3];top=Math.min(s.left,Math.max(10,(plays.split(';').length)*25));
+   cls=op>=6?'TD':op===3?'FG':dp>=6?'OPP_TD':dp===2?'SAFETY':'EOH'}
+  const st0={half:s.half,left:s.left,ytg:s.ytg,off:o,pts:s.pts.slice()};
+  s.pts[o]+=op;s.pts[1-o]+=dp;
+  const otNow=s.half===3;if(otNow)s.otd++;
+  s.left=runs?0:(s.half===3?s.left:s.left-top);
+  if(rec)log.push({...st0,top:runs?st0.left:top,cls,op,dp,plays,rs,after:s.pts.slice()});
+  let nOff=row[4]===1?o:1-o,nY=row[3];
+  if(s.left<=0&&s.half===1){s.half=2;s.left=1800;nOff=1-s.fr;nY=pickA(J.kick,r)}
+  else if(s.left<=0&&s.half===2){if(s.pts[0]===s.pts[1]){s.half=3;s.left=600;s.ot=true;nOff=r()<.5?0:1;nY=pickA(J.kick,r)}else break}
+  if(otNow&&((s.otd>=2&&s.pts[0]!==s.pts[1])||s.otd>=5))break;
+  s.off=nOff;s.ytg=nY}
+ return {h:s.pts[0],a:s.pts[1],ot:s.ot,log}}
+function many(T,st,n,seed){const r=rng(seed),M=new Int16Array(n),S=new Int16Array(n);
+ for(let i=0;i<n;i++){const g=game(T,r,st,false);let h=g.h,a=g.a;
+  if(g.ot&&h!==a){const m=pickA(J.ot,r),lo=Math.min(h,a);if(h>a){h=lo+m;a=lo}else{a=lo+m;h=lo}}
+  M[i]=h-a;S[i]=h+a}return{M,S}}
+const pregame=()=>({pts:[0,0],off:null,half:1,left:1800,ytg:null});
+/* ---------- UI ---------- */
+const TN=t=>J.teams[t].name, NICK=t=>TN(t).split(' ').slice(-1)[0];
+const f1=x=>(Math.round(x*10)/10).toFixed(1),pc=x=>Math.round(x*100)+'%';
+const spot=(ytg,offT,defT)=>ytg===50?'50':ytg>50?`${offT} ${100-ytg}`:`${defT} ${ytg}`;
+const ord=d=>['','1st','2nd','3rd','4th'][d]||'';
+function clock(half,left){if(half===3)return{q:'OT',c:mmss(left)};const q=half===1?(left>900?1:2):(left>900?3:4);return{q:'Q'+q,c:mmss(left>900?left-900:left)}}
+const mmss=s=>{s=Math.max(0,Math.round(s));return Math.floor(s/60)+':'+String(s%60).padStart(2,'0')};
+const DESC={P:'Pass',I:'Pass',R:'Run',Q:'QB scramble',S:'Sack',X:'Interception',F:'Fumble lost',G:'Field goal',M:'Field goal',U:'Punt',N:'Penalty',K:'Kneel',Z:'Spike'};
+const LOC={s:'short',d:'deep',l:'left',m:'middle',r:'right',e:'end',t:'tackle',g:'guard'};
+function parsePlays(str){if(!str)return[];return str.split(';').map(p=>{const [a,ytg,dn,tg,loc]=p.split(','),t=a[0],td=a[1]==='*',y=+a.slice(td?2:1);return{t,td,y,ytg:ytg===''?null:+ytg,dn:dn===''?null:+dn,tg:tg===''?null:+tg,loc}})}
+function playText(p){const L=p.loc?p.loc.split('').map(c=>LOC[c]).join(' '):'';let s;
+ switch(p.t){case'P':s=`Pass ${L} complete, ${p.y>=0?'+':''}${p.y}`;break;case'I':s=`Pass ${L} incomplete`;break;
+  case'R':s=`Run ${L}, ${p.y>=0?'+':''}${p.y}`;break;case'Q':s=`QB scramble, +${p.y}`;break;case'S':s=`Sack, ${p.y}`;break;
+  case'X':s='Interception';break;case'F':s='Fumble, lost';break;case'G':s=`${p.y}-yard field goal is good`;break;case'M':s=`${p.y}-yard field goal, no good`;break;
+  case'U':s=`Punt, ${p.y} yards`;break;case'K':s='Kneel down';break;case'Z':s='Spike';break;default:s='Penalty'}
+ return s.replace('  ',' ')+(p.td?' · TOUCHDOWN':'')}
+const RES={TD:'TD',FG:'FG',MISSFG:'Missed FG',PUNT:'Punt',TO:'Turnover',DOWNS:'Downs',OPP_TD:'Def. TD',SAFETY:'Safety',EOH:'End of half'};
+let cur={};
+function init(){
+ CUTS=J.bins.slice(1,-1);NB=J.bins.length-1;NS=J.nsit;DC=J.diff_cuts;
+ for(let c=0;c<J.classes.length;c++)for(let b=0;b<NB;b++){if(J.pools[`${c}_${b}`])continue;let best=null;for(let d=1;d<NB&&!best;d++)best=J.pools[`${c}_${b-d}`]||J.pools[`${c}_${b+d}`];BASEKEY[`${c}_${b}`]=best||[]}
+ const teams=Object.keys(J.teams).sort((a,b)=>TN(a).localeCompare(TN(b)));
+ const opt=sel=>teams.map(t=>`<option value="${t}"${t===sel?' selected':''}>${TN(t)}</option>`).join('');
+ const g0=J.games[0]||{a:'MIN',h:'GB',s:-3.5,t:44.5,n:0};
+ root.innerHTML=`
+ <p class="sub">Every game is played out drive by drive, 10,000 times. How each drive ends comes from a model fitted on every NFL drive since 2017 (field position, both teams' strength, the score and the clock), and the plays you watch are real NFL plays from a drive that ended the same way. Ratings: ${J.asof}. Data: nflverse.</p>
+ ${J.games.length?`<div class="chips" aria-label="Upcoming games"><span class="sub" style="margin:4px 4px 0 0">Upcoming:</span>${J.games.map((g,i)=>`<button class="chip" data-g="${i}" aria-pressed="${i===0}">${g.a} @ ${g.h}</button>`).join('')}</div>`:''}
+ <div class="ds-card">
+  <h2 class="ds-h">Build a matchup</h2>
+  <div class="ds-grid">
+   <label>Away team<select data-k="a">${opt(g0.a)}</select></label>
+   <label>Away QB<select data-k="aq"></select></label>
+   <label>Home team<select data-k="h">${opt(g0.h)}</select></label>
+   <label>Home QB<select data-k="hq"></select></label>
+  </div>
+  <div class="ds-row">
+   <label class="ds-sm">Home spread<input data-k="s" inputmode="decimal" value="${g0.s??''}" placeholder="-3.5"></label>
+   <label class="ds-sm">Over/under<input data-k="t" inputmode="decimal" value="${g0.t??''}" placeholder="44.5"></label>
+   <div class="chips" role="group" aria-label="Venue" style="margin:0"><button class="chip" data-v="0" aria-pressed="${!g0.n}">Home field</button><button class="chip" data-v="1" aria-pressed="${!!g0.n}">Neutral</button></div>
+   <button class="ds-go" data-run>Run 10,000 games</button>
+  </div>
+  <details class="ds-what"><summary>What if? Adjust a unit (points per game)</summary><div class="ds-grid" data-sl></div></details>
+ </div>
+ <div aria-live="polite" data-out></div>
+ <div class="ds-card" data-watch hidden>
+  <div class="ds-top"><h2 class="ds-h">Watch one game</h2>
+   <div class="chips" style="margin:0" role="group" aria-label="View"><button class="chip" data-view="f" aria-pressed="true">Field, play by play</button><button class="chip" data-view="l" aria-pressed="false">Drive log</button></div></div>
+  <div data-sb class="ds-sb"></div>
+  <div data-fv><div data-field></div><div class="ds-legend"><span><i style="background:#60a5fa"></i>Line of scrimmage</span><span><i style="background:#facc15"></i>First-down line</span><span><i style="background:#fff;border:1px solid var(--line)"></i>Run</span><span><i style="background:#fde68a"></i>Pass</span><span><i class="dash"></i>Incomplete</span></div>
+   <div class="ds-ctl"><button data-c="prev" aria-label="Previous play">◀︎</button><button data-c="play" class="ds-go">Play</button><button data-c="next" aria-label="Next play">▶︎</button>
+    <div class="chips" style="margin:0" role="group" aria-label="Speed"><button class="chip" data-sp="1" aria-pressed="false">1×</button><button class="chip" data-sp="2" aria-pressed="true">2×</button><button class="chip" data-sp="4" aria-pressed="false">4×</button></div>
+    <button data-c="skip" class="chip">Skip drive</button><button data-c="new" class="chip">New game</button><span class="sub" data-pos style="margin:0 0 0 auto"></span></div>
+   <div class="ds-split"><div><div class="sub" data-dh style="margin:8px 0 4px;font-weight:600"></div><ol class="ds-plays" data-pl></ol></div>
+    <div class="ds-side"><div class="ds-mini"><div class="sub" style="margin:0">Home win chance during this game</div><div data-wp></div></div><p class="sub">The drive's result comes from the sim. Its plays are replayed from a real NFL drive with the same result and starting spot, so they look real without changing the numbers.</p></div></div></div>
+  <div data-lv hidden><div class="tw" data-log></div></div>
+ </div>
+ <div class="ds-card">
+  <h2 class="ds-h">Live game</h2><p class="sub">Enter where a real game stands and the sim plays out the rest (the current possession restarts as a new drive from that spot).</p>
+  <div class="ds-grid ds-g3">
+   <label><span data-lab="as">Away score</span><input data-l="as" inputmode="numeric" value="0"></label>
+   <label><span data-lab="hs">Home score</span><input data-l="hs" inputmode="numeric" value="0"></label>
+   <label>Quarter<select data-l="q"><option value="1">1st</option><option value="2">2nd</option><option value="3">3rd</option><option value="4">4th</option><option value="5">OT</option></select></label>
+   <label>Time left in quarter<input data-l="tm" value="15:00"></label>
+   <label>Ball<select data-l="o"></select></label>
+   <label>Yards to the end zone<input data-l="y" inputmode="numeric" value="75"></label>
+  </div>
+  <div class="ds-row"><button class="ds-go" data-live>Play out the rest</button><span data-lo aria-live="polite"></span></div>
+ </div>
+ <p class="note">Simulations for entertainment and learning, not betting advice. The sim's chances are shown blended with the Vegas line (60% line, 40% sim) when a line is entered, the same way the site's picks are made; switch to "Sim only" to see the raw sim.</p>`;
+ const q=s=>root.querySelector(s);cur={neutral:!!g0.n,blend:true,sl:{ao:0,ad:0,ho:0,hd:0}};
+ const qbs=(k,t)=>{q(`[data-k=${k}]`).innerHTML=J.teams[t].qbs.map((x,i)=>`<option value="${i}">${x.n}${i===0?' (starter)':''}${x.p?` · ${x.p>0?'+':''}${f1(x.p)} pts`:''}</option>`).join('')};
+ const sync=()=>{qbs('aq',q('[data-k=a]').value);qbs('hq',q('[data-k=h]').value);
+  q('[data-lab=as]').textContent=NICK(q('[data-k=a]').value)+' score';q('[data-lab=hs]').textContent=NICK(q('[data-k=h]').value)+' score';
+  q('[data-l=o]').innerHTML=`<option value="1">${NICK(q('[data-k=a]').value)}</option><option value="0">${NICK(q('[data-k=h]').value)}</option>`;
+  q('[data-sl]').innerHTML=[['ao','a','offense'],['ad','a','defense'],['ho','h','offense'],['hd','h','defense']].map(([k,s,u])=>`<label>${NICK(q(`[data-k=${s}]`).value)} ${u} <b data-slv="${k}">${cur.sl[k]>0?'+':''}${cur.sl[k]}</b><input type="range" min="-7" max="7" step="1" value="${cur.sl[k]}" data-slk="${k}"></label>`).join('');
+  root.querySelectorAll('[data-slk]').forEach(i=>i.oninput=()=>{cur.sl[i.dataset.slk]=+i.value;q(`[data-slv=${i.dataset.slk}]`).textContent=(i.value>0?'+':'')+i.value})};
+ q('[data-k=a]').onchange=sync;q('[data-k=h]').onchange=sync;sync();
+ root.querySelectorAll('[data-v]').forEach(b=>b.onclick=()=>{cur.neutral=b.dataset.v==='1';root.querySelectorAll('[data-v]').forEach(x=>x.setAttribute('aria-pressed',x===b))});
+ root.querySelectorAll('[data-g]').forEach(b=>b.onclick=()=>{const g=J.games[+b.dataset.g];root.querySelectorAll('[data-g]').forEach(x=>x.setAttribute('aria-pressed',x===b));
+  q('[data-k=a]').value=g.a;q('[data-k=h]').value=g.h;q('[data-k=s]').value=g.s??'';q('[data-k=t]').value=g.t??'';cur.neutral=!!g.n;
+  root.querySelectorAll('[data-v]').forEach(x=>x.setAttribute('aria-pressed',(x.dataset.v==='1')===cur.neutral));sync();run()});
+ q('[data-run]').onclick=run;q('[data-live]').onclick=live;
+ root.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>{root.querySelectorAll('[data-view]').forEach(x=>x.setAttribute('aria-pressed',x===b));q('[data-fv]').hidden=b.dataset.view!=='f';q('[data-lv]').hidden=b.dataset.view!=='l'});
+ root.querySelectorAll('[data-sp]').forEach(b=>b.onclick=()=>{W.speed=+b.dataset.sp;root.querySelectorAll('[data-sp]').forEach(x=>x.setAttribute('aria-pressed',x===b))});
+ q('[data-c=play]').onclick=()=>W.playing?pause():play();q('[data-c=next]').onclick=()=>{pause();step(1)};q('[data-c=prev]').onclick=()=>{pause();step(-1)};
+ q('[data-c=skip]').onclick=()=>{pause();skipDrive()};q('[data-c=new]').onclick=()=>{pause();newGame()};
+ run()}
+function teamsNow(){const q=s=>root.querySelector(s),a=q('[data-k=a]').value,h=q('[data-k=h]').value,P=J.ppr,sl=cur.sl;
+ const aq=J.teams[a].qbs[+q('[data-k=aq]').value]||{p:0},hq=J.teams[h].qbs[+q('[data-k=hq]').value]||{p:0};
+ return{a,h,A:{off:J.teams[a].off+(aq.p+sl.ao)/P,dfn:J.teams[a].dfn-sl.ad/P},H:{off:J.teams[h].off+(hq.p+sl.ho)/P,dfn:J.teams[h].dfn-sl.hd/P}}}
+const num=v=>{const x=parseFloat(String(v).replace('−','-'));return isFinite(x)?x:null};
+function run(){const q=s=>root.querySelector(s),out=q('[data-out]');out.innerHTML='<p class="sub">Running 10,000 games…</p>';
+ setTimeout(()=>{const t=teamsNow(),T=table(t.H,t.A,cur.neutral),R=many(T,pregame(),10000,12345);
+  cur.res={t,T,R,spread:num(q('[data-k=s]').value),total:num(q('[data-k=t]').value)};paint();newGame()},20)}
+const PHI=z=>{const t=1/(1+0.2316419*Math.abs(z)),d=0.3989423*Math.exp(-z*z/2),q=d*t*(0.3193815+t*(-0.3565638+t*(1.781478+t*(-1.821256+t*1.330274))));return z>0?1-q:q};
+function paint(){const q=s=>root.querySelector(s),{t,R,spread,total}=cur.res,n=R.M.length;
+ let hw=0,tie=0,cov=0,push=0,ov=0,un=0,ex3=0,ex7=0,mm=0,tt=0;const hist=new Map();
+ for(let i=0;i<n;i++){const m=R.M[i],s=R.S[i];mm+=m;tt+=s;if(m>0)hw++;else if(m===0)tie++;
+  if(spread!=null){const c=m+spread;if(c>0)cov++;else if(c===0)push++}if(total!=null){if(s>total)ov++;else if(s<total)un++}
+  if(Math.abs(m)===3)ex3++;if(Math.abs(m)===7)ex7++;const k=Math.max(-35,Math.min(35,m));hist.set(k,(hist.get(k)||0)+1)}
+ mm/=n;tt/=n;
+ const bl=cur.blend,wS=0.4;  // shown = 60% line + 40% sim when a line is entered (same as the site's picks)
+ const H=NICK(t.h),A=NICK(t.a),useS=bl&&spread!=null,useT=bl&&total!=null;
+ const pHs=(hw+tie/2)/n,pH=useS?(1-wS)*PHI(-spread/13.5)+wS*pHs:pHs,am=useS?(1-wS)*(-spread)+wS*mm:mm,at=useT?(1-wS)*total+wS*tt:tt,hs=(at+am)/2,as=(at-am)/2;
+ const favLine=spread==null?'':`${spread<=0?H:A} ${spread===0?'PK':'-'+Math.abs(spread)}`;
+ const covS=spread==null?null:(spread<=0?cov/(n-push):(n-cov-push)/(n-push)),covP=covS==null?null:(useS?(1-wS)*0.5+wS*covS:covS);
+ const ovS=ov/(ov+un||1),ovP=useT?(1-wS)*0.5+wS*ovS:ovS;
+ let mx=0;for(const v of hist.values())mx=Math.max(mx,v);
+ const bars=[];for(let k=-35;k<=35;k++){const v=hist.get(k)||0;bars.push(`<i style="height:${(v/mx*100).toFixed(1)}%;background:${k<0?'var(--gold)':k>0?'var(--acc)':'var(--line)'}" title="${k===0?'Tie':(k>0?H:A)+' by '+Math.abs(k)}: ${pc(v/n)}"></i>`)}
+ const sx=spread==null?null:((-spread+35.5)/71*100);
+ q('[data-out]').innerHTML=`
+ <div class="chips" style="margin:10px 0" role="group" aria-label="Chances shown"><button class="chip" data-bl="1" aria-pressed="${cur.blend}">Blended with the line</button><button class="chip" data-bl="0" aria-pressed="${!cur.blend}">Sim only</button></div>
+ <div class="ds-tiles">
+  <div class="ds-tile"><div class="sub">Average score</div><b>${H} ${Math.round(hs)} · ${A} ${Math.round(as)}</b><span class="sub">${am>=0?H:A} by ${f1(Math.abs(am))}${useS?` (sim alone: ${mm>=0?H:A} by ${f1(Math.abs(mm))})`:''}</span></div>
+  <div class="ds-tile"><div class="sub">${pH>=.5?H:A} win</div><b style="color:${pH>=.5?'var(--acc)':'var(--gold)'}">${pc(Math.max(pH,1-pH))}</b><div class="ds-bar"><i style="width:${pc(pH)}"></i></div><span class="sub">${H} ${pc(pH)} · ${A} ${pc(1-pH)}</span></div>
+  ${spread!=null?`<div class="ds-tile"><div class="sub">${favLine} covers</div><b>${pc(covP)}</b><span class="sub">The sim's games land exactly on 3 ${pc(ex3/n)} of the time, on 7 ${pc(ex7/n)}</span></div>`:''}
+  ${total!=null?`<div class="ds-tile"><div class="sub">Over ${total}</div><b>${pc(ovP)}</b><span class="sub">Average total ${f1(at)}${useT?` (sim alone ${f1(tt)})`:''}</span></div>`:''}
+ </div>
+ <div class="ds-card"><div class="ds-top"><h2 class="ds-h">How the 10,000 simulated games ended</h2><div class="ds-legend" style="margin:0"><span><i style="background:var(--gold)"></i>${A} win</span><span><i style="background:var(--acc)"></i>${H} win</span>${spread!=null?'<span><i style="background:var(--warn)"></i>Spread</span>':''}</div></div>
+  <div class="ds-hist" role="img" aria-label="Bar chart of simulated final margins, with tall bars at 3 and 7 points">${bars.join('')}${sx!=null?`<b style="left:${sx}%"></b>`:''}</div>
+  <div class="ds-axis"><span>${A} by 35</span><span>${A} by 14</span><span>Tie</span><span>${H} by 14</span><span>${H} by 35</span></div>
+  <p class="sub">The tall bars at 3 and 7 are real football: field goals and touchdowns. They're why a half point near those numbers matters.</p></div>`;
+ root.querySelectorAll('[data-bl]').forEach(b=>b.onclick=()=>{cur.blend=b.dataset.bl==='1';paint()});
+ root.querySelector('[data-watch]').hidden=false}
+/* ---------- watch one game ---------- */
+const W={g:null,frames:[],i:0,playing:false,speed:2,timer:null,seed:1};
+function newGame(){const {t,T}=cur.res;W.seed++;const r=rng(W.seed*7919),g=game(T,r,pregame(),true);W.g=g;W.t=t;
+ // win chance after each drive (from the state at the next drive's start)
+ const wp=[0.5];const startP=many(T,pregame(),600,W.seed);let s0=0;for(const m of startP.M)s0+=m>0?1:m===0?.5:0;wp[0]=s0/600;
+ g.log.forEach((d,i)=>{const nx=g.log[i+1];if(!nx){wp.push(g.h>g.a?1:g.h<g.a?0:.5);return}
+  const R=many(T,{pts:nx.pts,off:nx.off,half:nx.half,left:nx.left,ytg:nx.ytg},300,W.seed*31+i);let s=0;for(const m of R.M)s+=m>0?1:m===0?.5:0;wp.push(s/300)});
+ W.wp=wp;W.frames=[];
+ g.log.forEach((d,di)=>{const pl=parsePlays(d.plays),offT=d.off===0?t.h:t.a,defT=d.off===0?t.a:t.h,real=d.rs,sim=d.ytg;
+  const map=y=>y==null?null:(d.cls==='TD'&&real>0?Math.max(0,Math.round(y*sim/real)):Math.min(99,Math.max(1,y+(sim-real))));
+  const ps=pl.filter(p=>p.t!=='N'||pl.length<3);const n=Math.max(ps.length,1);
+  if(!ps.length)W.frames.push({di,pi:0,np:1,y0:sim,y1:sim,txt:RES[d.cls]||d.cls,offT,defT,d});
+  ps.forEach((p,pi)=>{const y0=map(p.ytg)??sim;let y1;const nxp=ps[pi+1];
+   if(nxp&&nxp.ytg!=null)y1=map(nxp.ytg);else if(p.td||d.cls==='TD')y1=0;else if(['I','X','F','G','M','U','K','Z','N'].includes(p.t))y1=y0;else y1=Math.max(0,Math.min(100,y0-p.y));
+   if(['I','G','M','U','N'].includes(p.t))y1=y0;
+   W.frames.push({di,pi,np:n,y0,y1,p,txt:playText(p),dn:p.dn,tg:p.tg,offT,defT,d,clk:d.left-d.top*(pi/n)})})});
+ W.i=0;drawFrame();if(W.playing){}}
+function play(){W.playing=true;root.querySelector('[data-c=play]').textContent='Pause';const tick=()=>{if(!W.playing)return;if(W.i>=W.frames.length-1){pause();return}step(1);W.timer=setTimeout(tick,1400/W.speed)};W.timer=setTimeout(tick,500/W.speed)}
+function pause(){W.playing=false;clearTimeout(W.timer);const b=root.querySelector('[data-c=play]');if(b)b.textContent='Play'}
+function step(k){W.i=Math.max(0,Math.min(W.frames.length-1,W.i+k));drawFrame()}
+function skipDrive(){const di=W.frames[W.i].di;let j=W.i;while(j<W.frames.length-1&&W.frames[j].di===di)j++;W.i=j;drawFrame()}
+const X=(yFromAwayGoal)=>100+yFromAwayGoal*10;
+function drawFrame(){const q=s=>root.querySelector(s),F=W.frames[W.i];if(!F)return;const {t}=W,d=F.d,g=W.g;
+ const H=NICK(t.h),A=NICK(t.a),offH=d.off===0;
+ const pos=y=>offH?y:100-y; // home drives toward the left end zone (away's), away toward the right
+ // score shown = before the drive until its last play is shown
+ const lastOfDrive=!W.frames[W.i+1]||W.frames[W.i+1].di!==F.di,sc=lastOfDrive?d.after:d.pts;
+ const ck=clock(d.half,F.clk??d.left);
+ const dd=F.dn?`${ord(F.dn)} & ${F.tg>=F.y0&&F.y0<=10?'Goal':F.tg} at ${spot(F.y0,offH?H:A,offH?A:H)}`:`Ball at ${spot(F.y0,offH?H:A,offH?A:H)}`;
+ q('[data-sb]').innerHTML=`<div><i style="background:${!offH?'#e0a93b':'transparent'}"></i><b>${A}</b><span>${sc[1]}</span></div><div><i style="background:${offH?'#e0a93b':'transparent'}"></i><b>${H}</b><span>${sc[0]}</span></div><div><small>${ck.q}</small><b>${ck.c}</b></div><div class="dd"><small>Down &amp; distance</small><b>${dd}</b></div>`;
+ // field
+ const lines=[];for(let y=0;y<=100;y+=5)lines.push(`<line x1="${X(y)}" y1="0" x2="${X(y)}" y2="560" stroke="#fff" stroke-opacity="${y%10?0.45:0.9}" stroke-width="${y%100===0?4:y%10?1.5:2.5}"/>`);
+ const nums=[];for(let y=10;y<=90;y+=10){const tx=String(y<=50?y:100-y);nums.push(`<text x="${X(y)}" y="64" text-anchor="middle">${tx}</text><text x="${X(y)}" y="520" text-anchor="middle">${tx}</text>`)}
+ const dr=W.frames.filter((f,j)=>f.di===F.di&&j<=W.i&&f.p);const segs=dr.map((f,k)=>{const x1=X(pos(f.y0)),x2=X(pos(f.y1)),yy=120+(k%7)*52,col=f.p.t==='I'||f.p.t==='M'?'#fca5a5':['P','X'].includes(f.p.t)?'#fde68a':['G','U'].includes(f.p.t)?'#c4b5fd':'#ffffff',dash=f.p.t==='I'||f.p.t==='M'?'10 9':'0';
+  const path=['P','I','X','G','M','U'].includes(f.p.t)?`M${x1} ${yy} Q${(x1+x2)/2+(x1===x2?(offH?-60:60):0)} ${yy-46} ${x1===x2?x1+(offH?-1:1)*(f.p.t==='U'?f.p.y*10:f.p.t==='G'||f.p.t==='M'?Math.min(f.y0+10,60)*10:120):x2} ${yy}`:`M${x1} ${yy} L${x2} ${yy}`;
+  const lab=f.p.t==='I'?'Inc':f.p.t==='G'?'FG ✓':f.p.t==='M'?'FG ✗':f.p.t==='U'?'Punt':f.p.t==='X'?'INT':f.p.t==='F'?'FUM':(f.p.y>=0?'+':'')+f.p.y;
+  return`<path d="${path}" fill="none" stroke="${col}" stroke-width="5" stroke-linecap="round" stroke-dasharray="${dash}"/><circle cx="${x2}" cy="${yy}" r="7" fill="${col}" stroke="#12261c" stroke-width="2"/><text x="${Math.min(Math.max(x2+(offH?-12:12),110),1090)}" y="${yy+5}" text-anchor="${offH?'end':'start'}" class="pl">${lab}</text>`});
+ const los=X(pos(F.y0)),fd=F.tg&&F.y0>F.tg?X(pos(F.y0-F.tg)):null,ball=X(pos(F.y1??F.y0));
+ q('[data-field]').innerHTML=`<svg viewBox="0 0 1200 560" class="ds-field" role="img" aria-label="Field: ${dd}">
+  <rect width="1200" height="560" fill="#2f7d4f"/>${[0,2,4,6,8].map(i=>`<rect x="${100+i*100}" width="100" height="560" fill="#2a7348"/>`).join('')}
+  <rect width="100" height="560" fill="#8a6414"/><rect x="1100" width="100" height="560" fill="#1b5e3b"/>
+  <text x="50" y="280" class="ez" transform="rotate(-90 50 280)">${A.toUpperCase()}</text><text x="1150" y="280" class="ez" transform="rotate(90 1150 280)">${H.toUpperCase()}</text>
+  ${lines.join('')}<g class="num">${nums.join('')}</g>
+  <line x1="${X(pos(d.ytg))}" y1="90" x2="${X(pos(d.ytg))}" y2="470" stroke="#fff" stroke-width="2" stroke-dasharray="6 6" stroke-opacity=".6"/>
+  ${segs.join('')}
+  <line x1="${los}" y1="0" x2="${los}" y2="560" stroke="#60a5fa" stroke-width="5"/>${fd!=null?`<line x1="${fd}" y1="0" x2="${fd}" y2="560" stroke="#facc15" stroke-width="5"/>`:''}
+  <ellipse cx="${ball}" cy="470" rx="17" ry="10" fill="#7c3f12" stroke="#fff" stroke-width="2"/></svg>`;
+ {const fw=q('[data-field]'),sv=fw.querySelector('svg');if(fw.scrollWidth>fw.clientWidth){const k=sv.clientWidth/1200;fw.scrollLeft=Math.max(0,ball*k-fw.clientWidth/2)}}
+ // play list for this drive
+ const own=W.frames.filter(f=>f.di===F.di);q('[data-dh]').textContent=`Drive ${F.di+1} of ${g.log.length} · ${offH?H:A} ball at ${spot(d.ytg,offH?H:A,offH?A:H)} · result: ${RES[d.cls]||d.cls}${d.op?` (+${d.op})`:''}${d.dp?` (${offH?A:H} +${d.dp})`:''}`;
+ q('[data-pl]').innerHTML=own.map(f=>`<li class="${f===F?'on':''}" ${W.frames.indexOf(f)>W.i?'style="opacity:.35"':''}><span>${f.dn?`${ord(f.dn)} & ${f.tg} ${spot(f.y0,offH?H:A,offH?A:H)}`:''}</span><span>${f.txt}</span></li>`).join('');
+ q('[data-pos]').textContent=`Drive ${F.di+1} of ${g.log.length} · play ${F.pi+1} of ${F.np}`;
+ // win chance line
+ const wp=W.wp,n=wp.length-1,pts=wp.map((p,i)=>`${(i/n*300).toFixed(1)},${(150-p*140-5).toFixed(1)}`),upto=pts.slice(0,F.di+1+(lastOfDrive?1:0));
+ const now=wp[F.di+(lastOfDrive?1:0)];
+ q('[data-wp]').innerHTML=`<svg viewBox="0 0 300 150" class="ds-wpsvg" role="img" aria-label="${H} win chance ${pc(now)}"><line x1="0" y1="75" x2="300" y2="75" stroke="var(--line)" stroke-dasharray="4 4"/><polyline points="${pts.join(' ')}" fill="none" stroke="var(--line)" stroke-width="2"/><polyline points="${upto.join(' ')}" fill="none" stroke="var(--acc)" stroke-width="3"/><text x="4" y="14" class="ax">${H} 100%</text><text x="4" y="146" class="ax">0%</text></svg><b class="ds-wpn">${H} ${pc(now)}</b>`;
+ // drive log
+ q('[data-log]').innerHTML=`<table><tr><th>Qtr</th><th>Ball</th><th>Start</th><th>Result</th><th>${A} – ${H}</th></tr>${g.log.map((x,i)=>{const oh=x.off===0,ck=clock(x.half,x.left);return`<tr${i===F.di?' class="on"':''}><td>${ck.q} ${ck.c}</td><td><b style="color:${oh?'var(--acc)':'var(--gold)'}">${oh?H:A}</b></td><td>${spot(x.ytg,oh?H:A,oh?A:H)}</td><td>${RES[x.cls]||x.cls}</td><td>${x.after[1]} – ${x.after[0]}</td></tr>`}).join('')}<tr><td colspan="4"><b>Final</b></td><td><b>${g.a} – ${g.h}</b></td></tr></table>`}
+/* ---------- live ---------- */
+function live(){const q=s=>root.querySelector(s),o=q('[data-lo]');const t=teamsNow(),T=table(t.H,t.A,cur.neutral);
+ const hs=num(q('[data-l=hs]').value)||0,as=num(q('[data-l=as]').value)||0,qq=+q('[data-l=q]').value,tm=String(q('[data-l=tm]').value).split(':'),secs=(+tm[0]||0)*60+(+tm[1]||0);
+ const half=qq<=2?1:qq<=4?2:3,left=qq===5?Math.min(600,secs):((qq===1||qq===3)?900+secs:secs),off=+q('[data-l=o]').value,y=Math.min(99,Math.max(1,num(q('[data-l=y]').value)||75));
+ o.textContent='Running…';setTimeout(()=>{const R=many(T,{pts:[hs,as],off,half,left,ytg:y},10000,777);const n=R.M.length;let w=0,c=0,p=0;const sp=cur.res.spread,tot=cur.res.total;let ov=0,un=0;
+  for(let i=0;i<n;i++){const m=R.M[i];w+=m>0?1:m===0?.5:0;if(sp!=null){const x=m+sp;if(x>0)c++;else if(x===0)p++}if(tot!=null){if(R.S[i]>tot)ov++;else if(R.S[i]<tot)un++}}
+  const H=NICK(t.h),A=NICK(t.a);o.innerHTML=`<span class="ds-live"><b>${w/n>=.5?H:A} win ${pc(Math.max(w/n,1-w/n))}</b>${sp!=null?` · ${H} ${sp>0?'+':''}${sp} covers ${pc(c/(n-p||1))}`:''}${tot!=null?` · over ${tot} ${pc(ov/(ov+un||1))}`:''} <span class="sub">(sim only)</span></span>`},20)}
+})();/*END DRV*/
 </script></body></html>
