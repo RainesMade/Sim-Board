@@ -303,12 +303,13 @@ scorecard($('#sc'));
 
 
 
+
 /*DRV*/window.DS_DOTS=true;(function(){
 const root=document.getElementById('ds');if(!root)return;
 let J=null,loading=false;
 const tabBtn=document.querySelector('#main [data-p=ds]');
 const start=()=>{if(window.DS_DATA&&!J){J=window.DS_DATA;init();return}if(J||loading)return;loading=true;root.innerHTML='<p class="sub">Loading the drive model…</p>';
- fetch('drive_sim.json').then(r=>{if(!r.ok)throw 0;return r.json()}).then(j=>{J=j;init()}).catch(()=>{root.innerHTML='<div class="soon"><b>Drive Sim runs on the published site</b><p>This copy of the page can\'t load the drive model file. Open the Sim Board site to use it.</p></div>'})};
+ fetch('drive_sim.json?v=7937a7e5c7').then(r=>{if(!r.ok)throw 0;return r.json()}).then(j=>{J=j;init()}).catch(()=>{root.innerHTML='<div class="soon"><b>Drive Sim runs on the published site</b><p>This copy of the page can\'t load the drive model file. Open the Sim Board site to use it.</p></div>'})};
 if(tabBtn)tabBtn.addEventListener('click',start);
 /* ---------- model ---------- */
 const MID=[5,15,25,35,45,55,65,72.5,77.5,85,95];
